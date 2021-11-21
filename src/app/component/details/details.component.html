@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="left">
+    <div class="question" *ngFor="let key of dataQuestion">
+      <div class="number">{{ key.id }}</div>
+      <div class="name-question">
+        <p>{{ key.name }}</p>
+        <ul>
+          <li>{{ key.answerA }}</li>
+          <li>{{ key.answerB }}</li>
+          <li>{{ key.answerC }}</li>
+          <li>{{ key.answerD }}</li>
+        </ul>
+      </div>
+      <div class="answer">
+        <p>Câu trả lời đúng là:</p>
+        <ul>
+          <li [ngClass]="{ correct: key.answerA == key.answer }">
+            {{ key.answerA }}
+          </li>
+          <li [ngClass]="{ correct: key.answerB == key.answer }">
+            {{ key.answerB }}
+          </li>
+          <li [ngClass]="{ correct: key.answerC == key.answer }">
+            {{ key.answerC }}
+          </li>
+          <li [ngClass]="{ correct: key.answerD == key.answer }">
+            {{ key.answerD }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="ontop">
+      <div class="form-question">
+        Câu hỏi
+        <i class="fas fa-pen-square"></i>
+      </div>
+      <div class="description">
+        <ul>
+          <li>
+            <i class="fas fa-list-ul"></i>
+            2 câu hỏi
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            Lớp 3
+          </li>
+          <li>
+            <i class="fas fa-random"></i>
+            Tuần tự
+          </li>
+          <li>
+            <i class="fas fa-book"></i>
+            Toán học
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="onbottom">
+      <div class="share">
+        <i class="fas fa-bookmark"></i>
+        <i class="fas fa-share-alt"></i>
+        <i class="fas fa-upload"></i>
+      </div>
+      <div class="function">
+        <button
+          [routerLink]="['/edit-question']"
+          routerLinkActive="router-link-active"
+          class="edit"
+        >
+          Chỉnh sửa
+        </button>
+        <button class="preview">Xem trước</button>
+        <button class="bookmarks">Gán sách</button>
+      </div>
+    </div>
+  </div>
+</div>

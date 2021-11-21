@@ -1,0 +1,100 @@
+.container {
+  .question {
+    width: 70%;
+    float: right;
+    .on-top {
+      padding-top: 2rem;
+      float: right;
+      select {
+        width: 120px;
+        padding: 0.5rem;
+        margin: 0 1rem;
+        color: #787878;
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      button {
+        padding: 0.8rem 2rem;
+        background-color: #02b3ff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        margin: 0 1rem;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+    }
+    .on-bottom {
+      padding: 10rem 1rem 0;
+      .easy,
+      .difficult {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        margin-top: 2rem;
+        .left {
+          p {
+            color: #033d5d;
+          }
+        }
+        .right {
+          div {
+            display: inline-block;
+            padding: 0 1rem;
+            border-right: 1px solid #ccc;
+            &:last-child,
+            &:first-child {
+              border: none;
+            }
+            &:nth-child(2) {
+              border-left: 1px solid #ccc;
+            }
+          }
+          .icon {
+            background-color: #f77e7e;
+            padding: 2px 6px;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+          }
+          .number-question,
+          .classroom,
+          .on-bottom__subject {
+            color: #8aa8bb;
+            font-size: 1.4rem;
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
+          .bookmark {
+            padding-left: 3rem;
+            color: #c6c6c6;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          .share {
+            color: #8daabc;
+            padding-left: 2rem;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          .game {
+            color: #faa513;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

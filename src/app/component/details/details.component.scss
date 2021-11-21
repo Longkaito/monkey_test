@@ -1,0 +1,125 @@
+.container {
+  .left {
+    width: 68%;
+    height: 500px;
+    float: left;
+    .question {
+      position: relative;
+      padding: 2rem;
+      background-color: #fff;
+      margin-bottom: 2rem;
+      border-radius: 0 1rem 1rem;
+      box-shadow: 0 0 2rem 0.1rem #ccc;
+      .number {
+        position: absolute;
+        padding: 1rem 2.5rem;
+        color: #fff;
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        border-radius: 100rem 0 0 100rem;
+        background-color: #02b3ff;
+      }
+      .name-question,
+      .answer {
+        padding-bottom: 5rem;
+        p {
+          padding-bottom: 2rem;
+        }
+        li {
+          list-style: none;
+          display: inline-block;
+          border: 2px solid #02b3ff63;
+          padding: 1rem 3rem;
+          border-radius: 5px;
+          &:not(:first-child) {
+            margin-left: 3rem;
+          }
+        }
+      }
+      .answer {
+        p {
+          color: #02b3ff;
+        }
+        .correct {
+          background-color: #02b3ff63;
+          border: 2px solid #02b3ff;
+        }
+      }
+    }
+  }
+  .right {
+    padding: 1rem;
+    box-shadow: 0 0 2rem 0.1rem #ccc;
+
+    border-radius: 5px;
+    width: 30%;
+    background-color: #fff;
+    float: right;
+    .ontop {
+      padding-bottom: 5rem;
+      border-bottom: 1px solid #eee;
+      .form-question {
+        border: 2px solid #02b3ffad;
+        text-align: center;
+        padding: 6rem;
+        font-size: 2rem;
+        color: #02b3ff;
+        border-radius: 5px;
+      }
+      .description {
+        li {
+          color: #82a3b7;
+          font-size: 1.4rem;
+          display: inline-block;
+          width: 15rem;
+          padding: 2rem 0 0 1rem;
+          list-style: none;
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+          i {
+            padding-right: 1rem;
+          }
+        }
+      }
+    }
+    .onbottom {
+      .share {
+        float: right;
+        padding: 1rem 0.5rem;
+        color: #82a3b7;
+        i {
+          padding-left: 1rem;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      .function {
+        padding: 5rem 1rem 1rem;
+        button {
+          padding: 1rem 3rem;
+          border: none;
+          color: rgba(0, 0, 0, 0.5);
+          border-radius: 5px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .preview {
+          float: right;
+          background-color: #02b3ff;
+          color: #fff;
+        }
+        .bookmarks {
+          margin-top: 1rem;
+          width: 100%;
+          background-color: #14a2b8;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

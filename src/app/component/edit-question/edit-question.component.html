@@ -1,0 +1,127 @@
+<div class="container">
+  <div class="menu">
+    <div class="function">
+      <button
+        class="back"
+        [routerLink]="['']"
+        routerLinkActive="router-link-active"
+      >
+        <i class="fas fa-chevron-left"></i>
+        Quay lại
+      </button>
+      <button class="save" (click)="handleQuestion()">
+        <i class="fas fa-save"></i>
+        Lưu
+      </button>
+    </div>
+    <ul class="details">
+      <li>Lớp 3</li>
+      <li>Toán học</li>
+      <li>Câu hỏi khó</li>
+    </ul>
+  </div>
+  <div class="left">
+    <div
+      [ngClass]="{ hightlightRow: key.id == 1 }"
+      class="question"
+      *ngFor="let key of getDataQuestion"
+      (click)="changeQuestion(key.id - 1)"
+    >
+      <div class="option">
+        <div class="number">{{ key.id }}</div>
+        <div class="transfer">
+          <i class="fas fa-copy"></i>
+        </div>
+        <div class="delete">
+          <i class="fas fa-trash-alt"></i>
+        </div>
+      </div>
+      <div class="preview">
+        <div class="table">
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="add-question" (click)="resetData()">
+      <i class="fas fa-plus"></i>
+    </div>
+  </div>
+  <div class="right">
+    <div class="name-question">
+      <p>Câu hỏi</p>
+      <div class="data-question">
+        <textarea [(ngModel)]="nameQuestion">{{ nameQuestion }}</textarea>
+      </div>
+    </div>
+    <div class="options">
+      <p>Các lựa chọn</p>
+      <div class="answerA">
+        <input
+          type="radio"
+          (click)="getData()"
+          id="r1"
+          value="{{ questionA }}"
+          name="answer"
+          [checked]="answer == questionA"
+        />
+        <textarea
+          [ngClass]="{ select: getQuestion == 'r1' }"
+          name=""
+          [(ngModel)]="questionA"
+          >{{ questionA }}</textarea
+        >
+      </div>
+      <div class="answerB">
+        <input
+          type="radio"
+          (click)="getData()"
+          id="r2"
+          value="{{ questionB }}"
+          name="answer"
+          [checked]="answer == questionB"
+        />
+        <textarea
+          [ngClass]="{ select: getQuestion == 'r2' }"
+          name=""
+          [(ngModel)]="questionB"
+          >{{ questionB }}</textarea
+        >
+      </div>
+      <div class="answerC">
+        <input
+          type="radio"
+          (click)="getData()"
+          id="r3"
+          value="{{ questionC }}"
+          name="answer"
+          [checked]="answer == questionC"
+        />
+        <textarea
+          [ngClass]="{ select: getQuestion == 'r3' }"
+          name=""
+          [(ngModel)]="questionC"
+          >{{ questionC }}</textarea
+        >
+      </div>
+      <div class="answerD">
+        <input
+          type="radio"
+          (click)="getData()"
+          id="r4"
+          value="{{ questionD }}"
+          name="answer"
+          [checked]="answer == questionD"
+        />
+        <textarea
+          [ngClass]="{ select: getQuestion == 'r4' }"
+          name=""
+          [(ngModel)]="questionD"
+          >{{ questionD }}</textarea
+        >
+      </div>
+    </div>
+  </div>
+</div>
